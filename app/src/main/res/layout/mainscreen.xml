@@ -15,13 +15,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout1"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@color/white">
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="131dp"
-                android:layout_height="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/antonio_bold"
                 android:gravity="center_horizontal"
                 android:paddingStart="10dp"
@@ -29,38 +32,54 @@
                 android:textColor="#FF866B"
                 android:textSize="24dp"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteX="87dp"
-                tools:layout_editor_absoluteY="93dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/mark2"
-                android:layout_width="49dp"
-                android:layout_height="40dp"
-                android:layout_gravity="start|center"
+                android:layout_width="59dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:paddingStart="10dp"
-                app:srcCompat="@drawable/mark"
-                tools:layout_editor_absoluteX="38dp"
-                tools:layout_editor_absoluteY="93dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:srcCompat="@drawable/mark" />
 
             <ImageView
                 android:id="@+id/imgUserinfo"
                 android:layout_width="135dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/name"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="15dp" />
+                android:layout_marginEnd="252dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/name" />
 
             <ImageView
                 android:id="@+id/imgDevinfo2"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:layout_gravity="end|center_vertical"
                 android:paddingStart="35dp"
                 app:srcCompat="@drawable/devinfo"
-                tools:layout_editor_absoluteX="359dp"
-                tools:layout_editor_absoluteY="16dp" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/layout1"
+            android:layout_above="@id/imgAdd"
+            app:layout_constraintTop_toBottomOf="@id/layout1"
+            app:layout_constraintBottom_toTopOf="@id/imgAdd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <ImageView
             android:id="@+id/imgAdd"
@@ -70,15 +89,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="46dp"
-            app:srcCompat="@drawable/add" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_above="@+id/imgAdd"
-            android:layout_below="@+id/layout1" />
-
+            app:srcCompat="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </RelativeLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -30,6 +30,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35dp"
             android:background="@drawable/add_text"
+            android:fontFamily="@font/montserrat_regular"
             android:ems="10"
             android:hint="Email"
             android:inputType="text"
@@ -44,6 +45,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/add_text"
+            android:fontFamily="@font/montserrat_regular"
             android:ems="10"
             android:hint="Username"
             android:inputType="text|textPassword"
@@ -58,6 +60,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/add_text"
+            android:fontFamily="@font/montserrat_regular"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
@@ -72,6 +75,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/add_text"
+            android:fontFamily="@font/montserrat_regular"
             android:ems="10"
             android:hint="Confirm Password"
             android:inputType="textPassword"
@@ -80,14 +84,15 @@
             android:textSize="15dp" />
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCreate"
             android:layout_width="345dp"
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/primarycolor"
-            android:text="Create"
+            android:background="@drawable/rounded_button"
+            android:text="SIGN UP"
+            android:fontFamily="@font/montserrat_regular"
             android:textColor="@color/white"
             android:textSize="15dp" />
 

@@ -6,9 +6,10 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:color="@drawable/main_screen_item_tab"
+        android:layout_width="381dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/main_screen_item_tab"
         android:orientation="vertical"
         android:padding="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,11 +29,12 @@
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/montserrat_semibold"
                 android:text="TO DO Item 1"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="259dp"
+                android:layout_width="220dp"
                 android:layout_height="match_parent"
                 android:gravity="end"
                 android:orientation="horizontal">
@@ -47,8 +49,8 @@
 
                 <ImageView
                     android:id="@+id/img_delete"
-                    android:layout_width="32dp"
-                    android:layout_height="49dp"
+                    android:layout_width="28dp"
+                    android:layout_height="69dp"
                     android:layout_gravity="center_vertical"
                     tools:srcCompat="@drawable/delete" />
 
