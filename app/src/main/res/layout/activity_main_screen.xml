@@ -30,7 +30,8 @@
                 android:textSize="24dp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="87dp"
-                tools:layout_editor_absoluteY="93dp" />
+                tools:layout_editor_absoluteY="93dp"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/mark2"
@@ -40,7 +41,8 @@
                 android:paddingStart="10dp"
                 app:srcCompat="@drawable/mark"
                 tools:layout_editor_absoluteX="38dp"
-                tools:layout_editor_absoluteY="93dp" />
+                tools:layout_editor_absoluteY="93dp"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/imgUserinfo"
@@ -49,7 +51,8 @@
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/name"
                 tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="15dp" />
+                tools:layout_editor_absoluteY="15dp"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/imgDevinfo2"
@@ -59,7 +62,8 @@
                 android:paddingStart="35dp"
                 app:srcCompat="@drawable/devinfo"
                 tools:layout_editor_absoluteX="359dp"
-                tools:layout_editor_absoluteY="16dp" />
+                tools:layout_editor_absoluteY="16dp"
+                tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
