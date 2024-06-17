@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -68,9 +69,18 @@ public class main_screen extends AppCompatActivity {
         final View customLayout = getLayoutInflater().inflate(R.layout.add_item_dialog, null);
         builder.setView(customLayout);
 
+        // Remove the default title and buttons
         builder.setTitle("Add an item");
+        builder.setPositiveButton(null, null);
+        builder.setNegativeButton(null, null);
 
-        builder.setPositiveButton("Add", (dialog, which) -> {
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        Button btnOk = customLayout.findViewById(R.id.btn_ok);
+        Button btnCancel = customLayout.findViewById(R.id.btn_cancel);
+
+        btnOk.setOnClickListener(v -> {
             EditText editTextItem = customLayout.findViewById(R.id.edit_text_item);
             String item = editTextItem.getText().toString();
 
@@ -84,19 +94,15 @@ public class main_screen extends AppCompatActivity {
                 todoAdapter.notifyDataSetChanged();
 
                 Toast.makeText(this, "Item added: " + item, Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
             } else {
                 Toast.makeText(this, "Item cannot be empty", Toast.LENGTH_SHORT).show();
             }
         });
 
-        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+        btnCancel.setOnClickListener(v -> dialog.cancel());
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
 
-        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.dialogTitleColor));
-        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setBackground(getResources().getDrawable(R.drawable.rounded_rectangle));
-        dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.dialogTitleColor));
-        dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setBackground(getResources().getDrawable(R.drawable.rounded_rectangle));
     }
+
 }

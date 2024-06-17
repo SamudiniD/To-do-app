@@ -20,8 +20,10 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="131dp"
+                android:layout_width="109dp"
                 android:layout_height="27dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="236dp"
                 android:fontFamily="@font/antonio_bold"
                 android:gravity="center_horizontal"
                 android:paddingStart="10dp"
@@ -29,29 +31,36 @@
                 android:textColor="#FF866B"
                 android:textSize="24dp"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteX="87dp"
-                tools:layout_editor_absoluteY="93dp"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/mark2"
-                android:layout_width="49dp"
-                android:layout_height="40dp"
-                android:layout_gravity="start|center"
-                android:paddingStart="10dp"
-                app:srcCompat="@drawable/mark"
-                tools:layout_editor_absoluteX="38dp"
-                tools:layout_editor_absoluteY="93dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mark2"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/imgUserinfo"
-                android:layout_width="135dp"
-                android:layout_height="36dp"
+                android:layout_width="49dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center"
+                android:layout_marginTop="28dp"
+                android:paddingStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView5"
+                app:layout_constraintHorizontal_bias="0.132"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mark2"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/mark"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/mark2"
+                android:layout_width="90dp"
+                android:layout_height="42dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/name"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="15dp"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -60,9 +69,13 @@
                 android:layout_height="36dp"
                 android:layout_gravity="end|center_vertical"
                 android:paddingStart="35dp"
-                app:srcCompat="@drawable/devinfo"
-                tools:layout_editor_absoluteX="359dp"
-                tools:layout_editor_absoluteY="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toEndOf="@+id/mark2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.14"
+                android:background="@drawable/devinfo"
                 tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

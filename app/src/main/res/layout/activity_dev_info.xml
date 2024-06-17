@@ -67,7 +67,7 @@
                 android:text="Student No                 2021t01203"
                 android:textColor="@color/gray"
                 android:textSize="15dp"
-                 />
+                />
 
             <TextView
                 android:id="@+id/textView8"

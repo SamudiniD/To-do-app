@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -51,25 +52,31 @@ public class todoAdapter extends RecyclerView.Adapter<todoAdapter.ViewHolder> {
     }
 
     private void showEditItemDialog(int position, todoData todoData) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.CustomAlertDialog);
-        builder.setTitle("Edit " + todoData.todoItem);
 
-        // Inflate the custom layout/view
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.CustomAlertDialog);
+
         final View customLayout = LayoutInflater.from(context).inflate(R.layout.add_item_dialog, null);
         builder.setView(customLayout);
 
-        // Set the current text to the EditText
+        builder.setTitle("Edit " + todoData.todoItem);
+        builder.setPositiveButton(null , null);
+        builder.setNegativeButton(null, null);
+
+
         EditText editTextItem = customLayout.findViewById(R.id.edit_text_item);
         editTextItem.setText(todoData.todoItem);
 
-        builder.setPositiveButton("Update", null);
-        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
 
         // Create and show the AlertDialog
         AlertDialog dialog = builder.create();
         dialog.show();
 
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+        Button btnOk = customLayout.findViewById(R.id.btn_ok);
+        Button btnCancel = customLayout.findViewById(R.id.btn_cancel);
+
+        btnOk.setText("Edit");
+
+        btnOk.setOnClickListener(v -> {
             String newItem = editTextItem.getText().toString();
 
             if (!newItem.isEmpty()) {
@@ -90,8 +97,8 @@ public class todoAdapter extends RecyclerView.Adapter<todoAdapter.ViewHolder> {
             }
         });
 
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(context.getResources().getColor(R.color.dialogTitleColor));
-        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(context.getResources().getColor(R.color.dialogTitleColor));
+        btnCancel.setOnClickListener(v -> dialog.cancel());
+
     }
 
     private void showDeleteItemDialog(int position, todoData todoData) {
