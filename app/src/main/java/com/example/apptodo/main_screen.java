@@ -32,7 +32,9 @@ public class main_screen extends AppCompatActivity {
         String email = getIntent().getStringExtra("Email");
         String registerUsername = getIntent().getStringExtra("Username");
 
-        binding.textView5.setText(email);
+
+
+        binding.textView5.setText("ADD TO-DO");
 
         sharedPrefManager = new sharedPreferences(this);
 
